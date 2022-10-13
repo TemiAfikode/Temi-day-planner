@@ -151,6 +151,11 @@ const LoginComp = () => {
               </div>
             </form>
           </div>
+          <div className={style["have-account-mobile"]}>
+            <Link href="/register" className={style["redirect-link"]}>
+              You don&apos;t have an account?
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -394,6 +399,11 @@ const RegisterComp = () => {
                 </div>
               </div>
             </form>
+          </div>
+          <div className={style["have-account-mobile"]}>
+            <Link href="/login" className={style["redirect-link"]}>
+              You already have an account?
+            </Link>
           </div>
         </div>
       </div>
