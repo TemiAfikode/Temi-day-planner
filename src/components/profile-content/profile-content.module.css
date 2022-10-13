@@ -206,8 +206,9 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.task-title.done {
+.marked {
   text-decoration: line-through;
+  background-color: transparent;
 }
 .pagination {
   width: 100%;

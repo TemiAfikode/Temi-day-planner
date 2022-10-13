@@ -91,14 +91,16 @@ export default function ProfileContent({
       case SHARE_TASK_MODAL:
         return setState({ type, data: payload });
       case CANCEL_TASK:
-        return updateTask(payload._id, { status: "cancelled" });
+        return updateTask(payload._id, {
+          status: "cancelled",
+          tag: "cancelled",
+        });
       case DELETE_TASK:
         return deleteTask(payload._id);
     }
   };
 
   const handleUpdate = (task) => {
-    console.log(task);
     updateTask(task._id, {
       tag: task.tag !== "completed" ? "completed" : "usual",
       status: task.status === "done" ? "pending" : "done",
@@ -208,7 +210,13 @@ export default function ProfileContent({
                     className={`${style["task-card"]} ${style[tk.tag]}`}
                   >
                     <div className={style["task-card-header"]}>
-                      <h3 className={`task-title ${style[tk.status]}`}>
+                      <h3
+                        className={`task-title ${
+                          tk.status === "done" || tk.status === "cancelled"
+                            ? style["marked"]
+                            : ""
+                        }`}
+                      >
                         {tk.task}
                       </h3>
                       <div>
