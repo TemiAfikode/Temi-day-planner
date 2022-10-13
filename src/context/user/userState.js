@@ -93,7 +93,6 @@ const userState = (props) => {
       });
     }
   }
-
   return (
     <UserContext.Provider
       value={{

@@ -108,7 +108,6 @@ const taskState = (props) => {
     dispatch({ type: SHARE_TASK_REQUEST });
     try {
       const { data } = await axiosFetch.post(`/tasks/share/${id}`, { email });
-
       if (data.isSuccessful) {
         dispatch({ type: SHARE_TASK_SUCCESS, payload: data });
       } else {
@@ -117,7 +116,7 @@ const taskState = (props) => {
     } catch (error) {
       dispatch({
         type: TASK_FAILED,
-        payload: error.response ? error.response.data.error : error.message,
+        payload: error.response ? error.response.data.message : error.message,
       });
     }
   }

@@ -1,4 +1,11 @@
-import { mdiClock, mdiHome, mdiMenu, mdiPlus, mdiPower } from "@mdi/js";
+import {
+  mdiClock,
+  mdiHome,
+  mdiMenu,
+  mdiPlus,
+  mdiPower,
+  mdiStar,
+} from "@mdi/js";
 import Icon from "@mdi/react";
 import Link from "next/link";
 import React, { useContext } from "react";
@@ -7,7 +14,7 @@ import style from "./menu.module.css";
 import uiContext from "context/ui/uiContext";
 import { ADD_TASK_MODAL } from "context/ui/uiType";
 
-export default function Menu({ setQueryState, setOpenMenu }) {
+export default function Menu({ setQueryState, setOpenMenu, user }) {
   const { logoutUser } = useContext(userContext);
   const { setState } = useContext(uiContext);
 
