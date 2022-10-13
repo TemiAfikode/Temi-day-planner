@@ -1,0 +1,27 @@
+.menu-item-wrapper{
+    padding: 2rem 0;
+}
+.menu-item-list li{
+    padding: 1rem 2rem;
+    color: var(--light-clr);
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.menu-item-list li:hover{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+.menu-item-list li a{
+    display: flex;
+    align-items: center;
+    color: var(--light-clr);
+}
+.menu-item-list li h2{
+    padding-left: 1rem;
+}
+.menu-icon{
+    width: 40px;
+    height: 40px;
+}

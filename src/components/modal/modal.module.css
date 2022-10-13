@@ -1,0 +1,49 @@
+.add-task-modal-content {
+  padding: 2rem 1.5rem;
+  width: 500px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+.add-task-modal-content h1 {
+  font-family: "Roboto Slab", sans-serif;
+  padding-bottom: 1rem;
+}
+.add-task-modal-content label {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.add-task-modal-content input,
+.add-task-modal-content textarea {
+  background: var(--gray-clr);
+}
+.add-task-modal-content input {
+  height: auto;
+}
+.task-header {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.shared-due,
+.shared-email {
+  margin-bottom: 1rem;
+}
+.shared-due span:first-child {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.shared-email p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.shared-email li {
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+@media (max-width: 540px) {
+  .add-task-modal-content {
+    width: 100%;
+  }
+}

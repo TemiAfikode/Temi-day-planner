@@ -1,0 +1,6 @@
+export const ADD_TASK_MODAL = "ADD_TASK_MODAL";
+export const EDIT_TASK_MODAL = "EDIT_TASK_MODAL";
+export const CLOSE_TASK_MODAL = "CLOSE_TASK_MODAL";
+export const SHARE_TASK_MODAL = "SHARE_TASK_MODAL";
+export const VIEW_TASK_MODAL = "VIEW_TASK_MODAL";
+export const LOADING_MODAL = "LOADING_MODAL";

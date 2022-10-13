@@ -1,0 +1,327 @@
+.profile-content {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+}
+.profile-content-lhs {
+  flex: 3;
+  padding: 1rem 2rem 1rem;
+}
+.content-greeting {
+  text-align: end;
+  padding-bottom: 1.5rem;
+}
+.content-greeting h2 {
+  font-size: 1.5rem;
+}
+.content-greeting h2 span {
+  opacity: 0.7;
+  display: block;
+  text-transform: capitalize;
+}
+.my-task-today {
+  font-weight: 900;
+  padding-bottom: 1rem;
+  font-family: "Roboto Slab", sans-serif;
+}
+.center-task-board {
+  width: 100%;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.filter-wrapper {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  align-items: center;
+  position: relative;
+}
+.top-content {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-wrapper > div,
+.mobile-calendar {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 3px;
+  transition: all 0.4s;
+}
+.mobile-calendar {
+  position: relative;
+}
+.mobile-calendar button {
+  background: transparent;
+}
+.calendar-wrapper {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+  width: 60vw;
+  height: 300px;
+}
+.calendar-btn {
+  cursor: pointer;
+  display: none;
+}
+.filter-wrapper > div:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+.filter-wrapper span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+}
+.dropdown {
+  position: absolute;
+  top: 60px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: var(--light-clr);
+  z-index: 10;
+}
+.dropdown.filter-dropdown-left {
+  left: 0px;
+}
+.dropdown.filter-dropdown-right,
+.dropdown.options-dropdown {
+  right: -20px;
+}
+.dropdown:hover {
+  background: var(--light-clr) !important;
+  border-radius: 12px !important;
+}
+.dropdown ul li {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+.dropdown ul li:hover,
+.active-option {
+  background: var(--primary-clr);
+  color: var(--light-clr);
+}
+.dropdown.options-dropdown ul li {
+  padding: 1rem 2rem;
+  color: var(--black-clr);
+}
+.task-icon {
+  width: 32px;
+  height: 32px;
+}
+.task-list {
+  padding: 1rem;
+}
+.task-card {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 12px;
+  color: var(--light-clr);
+}
+.task-card-header {
+  margin-bottom: 0.5rem;
+}
+.task-card-header,
+.task-card-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.task-title,
+.task-card-header > div {
+  color: var(--black-clr);
+  opacity: 0.8;
+  margin-left: 5px;
+}
+.task-card-header > div > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.task-card-header > div > span:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.task-card-body > div {
+  display: inline-flex;
+  align-items: center;
+}
+.task-card-body > p,
+.task-card-date {
+  opacity: 0.7;
+}
+.task-checker-wrapper {
+  padding: 0.5rem;
+}
+.task-checker {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.task-checker-label {
+  position: relative;
+  cursor: pointer;
+}
+.task-checker-label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: var(--accent-clr);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.task-checker:checked + .task-checker-label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  width: 6px;
+  height: 14px;
+  border: solid var(--light-clr);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.task-title.done {
+  text-decoration: line-through;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pagination button {
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+.profile-content-rhs {
+  flex: 2;
+  height: calc(100vh - 73.6px);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+.create-task-container {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.show-today-date p {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.show-today-date h2 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 2rem;
+}
+.add-task-btn button {
+  cursor: pointer;
+  background: var(--accent-clr);
+  text-align: center;
+  color: var(--light-clr);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 3px 5px 5px var(--accent-clr);
+  transition: all 0.4s;
+}
+.add-task-btn button:hover {
+  box-shadow: 5px 7px 10px var(--accent-clr), -5px -7px 10px var(--accent-clr);
+  transform: translateY(-5px);
+}
+.add-icon {
+  width: 24px;
+  height: 24px;
+}
+.add-task-btn button {
+  padding-left: 8px;
+}
+.calendar-container {
+  width: 100%;
+  padding: 2rem 0 2rem 0;
+  align-items: center;
+}
+.status-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.task-icon-share {
+  width: 24px;
+  height: 24px;
+}
+.usual,
+.upcoming {
+  background-color: var(--usual-tk);
+}
+.important,
+.needful {
+  background-color: var(--neccessary-tk);
+}
+.completed {
+  background-color: var(--completed-tk);
+}
+.cancelled {
+  background-color: var(--cancelled-tk);
+}
+.due {
+  background-color: var(--due-tk);
+}
+.urgent,
+.important {
+  background-color: var(--urgent-tk);
+}
+
+@media (max-width: 540px) {
+  .profile-content-rhs {
+    display: none;
+  }
+  .filter-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .dropdown.filter-dropdown-left {
+    right: -20px;
+    left: unset;
+    width: fit-content;
+  }
+  .dropdown.filter-dropdown-right {
+    top: 90px;
+  }
+  .calendar-btn {
+    display: block;
+  }
+  .task-card-body {
+    flex-direction: column;
+  }
+}
