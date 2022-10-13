@@ -14,7 +14,7 @@ import style from "./menu.module.css";
 import uiContext from "context/ui/uiContext";
 import { ADD_TASK_MODAL } from "context/ui/uiType";
 
-export default function Menu({ setQueryState, setOpenMenu, user }) {
+export default function Menu({ setQueryState, setOpenMenu }) {
   const { logoutUser } = useContext(userContext);
   const { setState } = useContext(uiContext);
 
